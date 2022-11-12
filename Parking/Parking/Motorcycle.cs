@@ -28,7 +28,8 @@ namespace Parking
 
         public override void Details()
         {
-            
+
+            Console.WriteLine("Plats " + VehiclePosition[0] + " MC " + RegistrationNumber + " " + VehicleColor + " " + Brand);
         }
 
     }

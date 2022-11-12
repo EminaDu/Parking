@@ -18,7 +18,7 @@ namespace Parking
 
         public override void Details()
         {
-
+            Console.WriteLine("Plats " + VehiclePosition[0] + " Bil " + RegistrationNumber + " " + VehicleColor + (ElectricCar ? "Elbil" : "Inte Elbil"));
         }
 
 

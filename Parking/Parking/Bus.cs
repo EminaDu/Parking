@@ -20,7 +20,7 @@ namespace Parking
 
         public override void Details()
         {
-            
+            Console.WriteLine("Plats " + VehiclePosition[0] + " Buss " + RegistrationNumber + " " + VehicleColor + " " + NumberOfPassengers);
         }
     }
 }

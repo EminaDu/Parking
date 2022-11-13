@@ -15,12 +15,14 @@ namespace Parking
 
         public List<Vehicle> Vehicles { get; set; }
 
+        private int NumberOfParkingPlaces { get; set; } = 15;
+
         public Parking()
         {
             ParkingPlaces = new List<double>();
-            for (int i = 0; i < ParkingPlaces.Count; i++)
+            for (int i = 0; i < NumberOfParkingPlaces; i++)
             {
-                ParkingPlaces.Add(i);
+                ParkingPlaces.Add(1);
             }
             PricePerMin = 1.5;
             Vehicles = new List<Vehicle>();
@@ -33,7 +35,7 @@ namespace Parking
             DateTime leavingTime = DateTime.Now;
             TimeSpan totalTimeStay = leavingTime - vehicle.EntranceTime;
             double totalPrice = totalTimeStay.TotalMinutes * PricePerMin;
-            Console.WriteLine("Det kostade:" + totalPrice);
+            Console.WriteLine("Kostnad för parkering:" + Math.Round(totalPrice,2));
         }
 
         public void LeaveParking(string registrationNumber)
@@ -77,7 +79,7 @@ namespace Parking
             }
             else
             {
-                Console.WriteLine("Fordon kan inte passa.");
+                Console.WriteLine("Slut på parkerings platser.");
             }
         }
         private List<int> TryParkingVehicle(Vehicle vehicle)

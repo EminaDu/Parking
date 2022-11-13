@@ -20,7 +20,7 @@ namespace Parking
 
         private string GenerateBrand()
         {
-            Random rnd=new Random();
+            Random rnd=new();
             string[] brands = new string[] { "Yamaha", "Suzuki", "BMW", "Harley", "Ducati" };
 
             return brands[rnd.Next(0, brands.Length)];

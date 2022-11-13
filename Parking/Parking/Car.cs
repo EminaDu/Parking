@@ -12,13 +12,13 @@ namespace Parking
 
         public Car()
         {
-            Random rnd = new Random();
+            Random rnd = new();
             ElectricCar = Convert.ToBoolean(rnd.Next(0, 2));
         }
 
         public override void Details()
         {
-            Console.WriteLine("Plats " + VehiclePosition[0] + " Bil " + RegistrationNumber + " " + VehicleColor + (ElectricCar ? "Elbil" : "Inte Elbil"));
+            Console.WriteLine("Plats " + VehiclePosition[0] + " Bil " + RegistrationNumber + " " + VehicleColor + " " + (ElectricCar ? "Elbil" : "Inte Elbil"));
         }
 
 

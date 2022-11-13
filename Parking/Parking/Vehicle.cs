@@ -26,7 +26,7 @@ namespace Parking
         private string GenerateVehicleColor()
         {
             Random rnd = new Random();
-            string[] colors = new string[] { "Blue", "Red", "Black", "White", "Green", "Gray", "Silver", "Yellow", "Brown" };
+            string[] colors = new string[] { "Blå", "Röd", "Svart", "Vit", "Grön", "Grå", "Silver", "Gul", "Brun" };
 
             return colors[rnd.Next(colors.Length)];
         }
@@ -35,7 +35,7 @@ namespace Parking
 
         private string GenerateRegistrationNumber()
         {
-            Random rnd = new Random();
+            Random rnd = new();
             string regNumber = "";
             for (int i = 0; i < 3; i++)
             {
@@ -55,7 +55,7 @@ namespace Parking
 
         public void EnterParkigPlace(List<int> parkingPosition)
         {
-            EntranceTime = new DateTime();
+            EntranceTime = DateTime.Now;
             VehiclePosition = parkingPosition;
         }
 
